@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import HowItWorks from './components/HowItWorks';
+import Testimonial from './components/Testimonial';
 import './App.css';
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
         <Hero />
         <About />
         <HowItWorks />
+        <Testimonial />
       </main>
 
       <footer
