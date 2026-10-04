@@ -63,7 +63,7 @@ export default function Testimolial() {
         </div>
         <form
           onSubmit={handleSubmit(SubmitForm)}
-          className="bg-[#1A0F2E] border rounded-[20px] xl:rounded-[80px]   my-5 xl:my-0 xl:mt-2.5 px-5 pt-5 pb-15  w-83.25 xl:w-164 xl:h-170.75  h-auto border-[#B919BC] place-items-center xl:place-items-start xl:gap-6"
+          className="bg-[#1A0F2E] border rounded-[20px] xl:rounded-[80px]   my-5 xl:my-0 xl:mt-2.5 p-5 mb-15 xl:mb-5  w-83.25 xl:w-164 xl:h-168.75  h-auto border-[#B919BC] place-items-center xl:place-items-start xl:gap-6"
         >
           <div className="p-3 flex flex-col xl:w-full gap-3 relative">
             <label htmlFor="name" className="pl-2.5 ">
@@ -78,7 +78,7 @@ export default function Testimolial() {
               placeholder="Digite seu nome completo"
             />
             {errors.name && (
-              <p className="text-[14px] absolute top-[94%] left-[3%] w-auto leading-2.5">
+              <p className="text-[14px] absolute top-[94%] left-[5%] xl:left-[2%] w-auto leading-2.5">
                 {errors.name?.message}
               </p>
             )}
@@ -101,24 +101,25 @@ da plataforma "
 
               <p
                 className={`absolute top-[88%] xl:top-[86%] ${
-                  count > 100
-                    ? ' left-[74%] xl:left-[85%]'
-                    : 'left-[73.5%] xl:left-[85%]'
+                  count >= 100
+                    ? ' left-[72%] xl:left-[85%]'
+                    : 'left-[74%] xl:left-[86%]'
                 }`}
               >
                 ({count}/244)
               </p>
+
+              {errors.testimonial && (
+                <p className="text-[14px] absolute top-[100%] left-[2%] xl:left-0 w-auto leading-3 xl:leading-2.5">
+                  {errors.testimonial?.message}
+                </p>
+              )}
             </div>
-            {errors.testimonial && (
-              <p className="text-[14px] w-auto leading-2.5">
-                {errors.testimonial?.message}
-              </p>
-            )}
           </div>
 
           <button
             type="submit"
-            className={` ${count > 244 || (count < 32 && 'disabled')}  bg-linear-65 w-77.25 xl:w-62.5 xl:h-13.75 -left-2 h-12.5 relative xl:left-2.5 mt-5 xl:mt-2.5 border-2 rounded-[100px] hover:opacity-85 active:opacity-85 cursor-pointer  from-[#B919BC57] to-[#170748]`}
+            className={` ${count > 244 || (count < 32 && 'disabled')}  bg-linear-65 w-77.25 xl:w-62.5 xl:h-13.75 -left-2 h-12.5 relative xl:left-2.5 mt-5 xl:mt-4.5 border-2 rounded-[100px] hover:opacity-85 active:opacity-85 cursor-pointer  from-[#B919BC57] to-[#170748]`}
           >
             Enviar
           </button>
