@@ -51,7 +51,7 @@ export default function Testimolial() {
             <p className="text-white text-[16px] tracking-[15%] xl:text-[22px] leading-5 xl:leading-8">
               <span className=" font-bold bold">
                 Teve alguma experiência com o squad Guardiões da Galáxia?
-              </span>{' '}
+              </span>
               <br />
               <span className="regular font-normal">
                 Seja como participante ou recrutador, compartilhe seu
@@ -65,7 +65,7 @@ export default function Testimolial() {
           onSubmit={handleSubmit(SubmitForm)}
           className="bg-[#1A0F2E] border rounded-[20px] xl:rounded-[80px]   my-5 xl:my-0 xl:mt-2.5 px-5 pt-5 pb-15  w-83.25 xl:w-164 xl:h-170.75  h-auto border-[#B919BC] place-items-center xl:place-items-start xl:gap-6"
         >
-          <div className="p-3 flex flex-col xl:w-full gap-3">
+          <div className="p-3 flex flex-col xl:w-full gap-3 relative">
             <label htmlFor="name" className="pl-2.5 ">
               Nome<span>*</span>
             </label>
@@ -78,7 +78,7 @@ export default function Testimolial() {
               placeholder="Digite seu nome completo"
             />
             {errors.name && (
-              <p className="text-[14px] relative xl:left-4 leading-[15px]">
+              <p className="text-[14px] absolute top-[94%] left-[3%] w-auto leading-2.5">
                 {errors.name?.message}
               </p>
             )}
@@ -110,7 +110,7 @@ da plataforma "
               </p>
             </div>
             {errors.testimonial && (
-              <p className="text-[14px] leading-[15px] relative xl:left-4">
+              <p className="text-[14px] w-auto leading-2.5">
                 {errors.testimonial?.message}
               </p>
             )}
@@ -118,7 +118,7 @@ da plataforma "
 
           <button
             type="submit"
-            className={` ${count >= 244 && 'disabled'}  bg-linear-65 w-77.25 xl:w-62.5 xl:h-13.75 -left-2 h-12.5 relative xl:left-2.5 mt-5 xl:mt-2.5 border-2 rounded-[100px] hover:opacity-85 active:opacity-85 cursor-pointer  from-[#B919BC57] to-[#170748]`}
+            className={` ${count > 244 || (count < 32 && 'disabled')}  bg-linear-65 w-77.25 xl:w-62.5 xl:h-13.75 -left-2 h-12.5 relative xl:left-2.5 mt-5 xl:mt-2.5 border-2 rounded-[100px] hover:opacity-85 active:opacity-85 cursor-pointer  from-[#B919BC57] to-[#170748]`}
           >
             Enviar
           </button>
