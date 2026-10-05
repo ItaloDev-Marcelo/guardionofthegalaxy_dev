@@ -96,3 +96,7 @@ p {
 .bold {
   font-style: Bold;
 }
+
+#testimonial-bg {
+  background-image: url(./assets/transparent-image.png);
+}
